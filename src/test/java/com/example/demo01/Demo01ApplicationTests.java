@@ -31,22 +31,22 @@ class Demo01ApplicationTests {
 //        int delete = empMapper.delete(17); // 返回值为删除的条数
     empMapper.delete(16);
     }
-//    @Test
-//    public void testInsert(){
-////        int delete = empMapper.delete(17); // 返回值为删除的条数
-//        //创建员工对象
-//        Emp emp = new Emp();
-//        emp.setUsername("tom");
-//        emp.setName("汤姆");
-//        emp.setImage("1.jpg");
-//        emp.setGender((short)1);
-//        emp.setJob((short)1);
-//        emp.setEntrydate(LocalDate.of(2000,1,1));
-//        emp.setCreateTime(LocalDateTime.now());
-//        emp.setUpdateTime(LocalDateTime.now());
-//        emp.setDeptId(1);
-//        //调用添加方法
-////        empMapper.insert(emp);
-//    }
+    @Test
+    public void testInsert(){
+//        int delete = empMapper.delete(17); // 返回值为删除的条数
+        //创建员工对象
+        Emp emp = new Emp();
+        emp.setUsername("tom");
+        emp.setName("汤姆");
+        emp.setImage("1.jpg");
+        emp.setGender((short)1);
+        emp.setJob((short)1);
+        emp.setEntrydate(LocalDate.of(2000,1,1));
+        emp.setCreateTime(LocalDateTime.now());
+        emp.setUpdateTime(LocalDateTime.now());
+        emp.setDeptId(1);
+        //调用添加方法
+        empMapper.insert(emp);
+    }
 
 }

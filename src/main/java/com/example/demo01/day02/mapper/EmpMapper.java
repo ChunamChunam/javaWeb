@@ -12,7 +12,7 @@ public interface EmpMapper {
     @Delete(value = "delete from emp where id=#{id}")//使用#{key}方式获取方法中的参数值
     public void delete(Integer id);
 
-//    @Insert("insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time)" +
-//            " values (#{username}, #{name}, #{gender}, #{image}, #{job}, #{entrydate}, #{deptId}, #{createTime}, #{updateTime})")
-//    public void insert(Emp emp);
+    @Insert("insert into emp(username, name, gender, image, job, entrydate, dept_id, create_time, update_time)" +
+            " values (#{username}, #{name}, #{gender}, #{image}, #{job}, #{entrydate}, #{deptId}, #{createTime}, #{updateTime})")
+    public void insert(Emp emp);
 }
