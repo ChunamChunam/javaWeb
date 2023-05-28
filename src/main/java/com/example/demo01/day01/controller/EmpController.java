@@ -1,10 +1,8 @@
-package com.example.demo01.controller;
+package com.example.demo01.day01.controller;
 
-import com.example.demo01.bean.Emp;
-import com.example.demo01.bean.Result;
-import com.example.demo01.service.EmpService;
-import com.example.demo01.utils.XmlParserUtils;
-import jakarta.annotation.Resource;
+import com.example.demo01.day01.bean.Emp;
+import com.example.demo01.day01.bean.Result;
+import com.example.demo01.day01.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;

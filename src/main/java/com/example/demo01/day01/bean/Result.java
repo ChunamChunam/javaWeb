@@ -1,4 +1,4 @@
-package com.example.demo01.bean;
+package com.example.demo01.day01.bean;
 
 /**
  * 统一响应结果封装类

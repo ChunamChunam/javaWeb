@@ -1,9 +1,8 @@
-package com.example.demo01.mapper;
+package com.example.demo01.day01.mapper;
 
-import com.example.demo01.bean.User;
+import com.example.demo01.day01.bean.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.web.bind.annotation.Mapping;
 
 import java.util.List;
 

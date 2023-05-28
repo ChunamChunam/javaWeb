@@ -1,7 +1,6 @@
-package com.example.demo01.service;
+package com.example.demo01.day01.service;
 
-import com.example.demo01.bean.Emp;
-import com.example.demo01.dao.EmpDao;
+import com.example.demo01.day01.bean.Emp;
 
 import java.util.List;
 
