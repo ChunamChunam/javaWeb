@@ -68,4 +68,15 @@ class Demo01ApplicationTests {
         empMapper.update(emp);
     }
 
+
+    @Test
+    public void getById(){
+        Emp emp = empMapper.getById(18);
+        System.out.println(emp);
+    }
+    @Test
+    public void testList2(){
+        List<Emp> empList = empMapper.list("张", (short) 1, LocalDate.of(2010, 1, 1), LocalDate.of(2020, 1, 1));
+        System.out.println(empList);
+    }
 }
