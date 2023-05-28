@@ -49,5 +49,23 @@ class Demo01ApplicationTests {
         empMapper.insert(emp);
         System.out.println(emp.getId());
     }
+    @Test
+    public void testUpdate(){
+        //要修改的员工信息
+        Emp emp = new Emp();
+        emp.setId(18);
+        emp.setUsername("songdaxia");
+        emp.setPassword(null);
+        emp.setName("老宋");
+        emp.setImage("2.jpg");
+        emp.setGender((short)1);
+        emp.setJob((short)2);
+        emp.setEntrydate(LocalDate.of(2012,1,1));
+        emp.setCreateTime(null);
+        emp.setUpdateTime(LocalDateTime.now());
+        emp.setDeptId(2);
+        //调用方法，修改员工数据
+        empMapper.update(emp);
+    }
 
 }
