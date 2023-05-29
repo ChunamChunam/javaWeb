@@ -15,9 +15,14 @@
     <!--        order by update_time desc-->
     <!--    </select>-->
 
-    <select id="listXml" resultType="com.example.demo01.day03.bean.EmpXml">
-        select *
+    <sql id="commonSelect">
+        select id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time
         from emp
+    </sql>
+
+
+    <select id="listXml" resultType="com.example.demo01.day03.bean.EmpXml">
+        <include refid="commonSelect"/>
         <where>
             <if test="name != null">
                 name like concat('%', #{name}, '%')
