@@ -4,6 +4,8 @@ import com.example.demo01.day01.bean.User;
 import com.example.demo01.day01.mapper.UserMapper;
 import com.example.demo01.day02.bean.Emp;
 import com.example.demo01.day02.mapper.EmpMapper;
+import com.example.demo01.day03.bean.EmpXml;
+import com.example.demo01.day03.mapper.EmpMapperXml;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +20,9 @@ class Demo01ApplicationTests {
     private UserMapper userMapper;
     @Autowired
     private EmpMapper empMapper;
+
+    @Autowired
+    private EmpMapperXml empMapperXml;
     @Test
     public void testList(){
         List<User> userList = userMapper.list();
@@ -77,6 +82,11 @@ class Demo01ApplicationTests {
     @Test
     public void testList2(){
         List<Emp> empList = empMapper.list("张", (short) 1, LocalDate.of(2010, 1, 1), LocalDate.of(2020, 1, 1));
+        System.out.println(empList);
+    }
+    @Test
+    public void testMybatisXml(){
+        List<EmpXml> empList = empMapperXml.listXml("张", (short) 1, LocalDate.of(2010, 1, 1), LocalDate.of(2020, 1, 1));
         System.out.println(empList);
     }
 }
