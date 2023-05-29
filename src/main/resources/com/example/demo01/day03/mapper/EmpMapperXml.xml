@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--        XML映射文件的namespace属性为Mapper接口全限定名-->
 <mapper namespace="com.example.demo01.day03.mapper.EmpMapperXml">
+
     <!--    XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一致-->
     <!--    <select id="listXml" resultType="com.example.demo01.day03.bean.EmpXml">-->
     <!--        select *-->
@@ -60,4 +61,19 @@
         </set>
         WHERE id = #{id}
     </update>
+
+    <!--    批量删除员工-->
+    <!--
+        collection:遍历集合
+        item: 便利出来的元素
+        separator: 分隔符
+        open: 遍历
+        close: 便利结束后拼接的SQL片段段
+    -->
+    <delete id="deleteEmpById">
+        DELETE FROM emp WHERE id IN
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

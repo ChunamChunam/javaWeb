@@ -14,4 +14,6 @@ public interface EmpMapperXml {
 
 
     public void updateSQL(EmpXml empXml);
+
+    public void deleteEmpById(List<Integer> ids);
 }
