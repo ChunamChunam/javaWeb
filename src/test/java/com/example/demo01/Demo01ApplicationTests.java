@@ -89,4 +89,11 @@ class Demo01ApplicationTests {
         List<EmpXml> empList = empMapperXml.listXml("张", (short) 1, LocalDate.of(2010, 1, 1), LocalDate.of(2020, 1, 1));
         System.out.println(empList);
     }
+    // 动态SQL
+    @Test
+    public void testMybatisSQL(){
+//        List<EmpXml> empList = empMapperXml.listXml("张", null,null,null);
+        List<EmpXml> empList = empMapperXml.listXml(null, null,null,null);
+        System.out.println(empList);
+    }
 }
