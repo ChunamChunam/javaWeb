@@ -96,4 +96,16 @@ class Demo01ApplicationTests {
         List<EmpXml> empList = empMapperXml.listXml(null, null,null,null);
         System.out.println(empList);
     }
+    @Test
+    public void testMybatisUpdateSQL(){
+        //要修改的员工信息
+        EmpXml empXml = new EmpXml();
+        empXml.setId(18);
+        empXml.setUsername("songdaxiaUpdate");
+        empXml.setName("老宋更新");
+        empXml.setGender((short)2);
+        empXml.setUpdateTime(LocalDateTime.now());
+        //调用方法，修改员工数据
+        empMapperXml.updateSQL(empXml);
+    }
 }
